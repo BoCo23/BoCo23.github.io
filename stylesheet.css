@@ -1,0 +1,117 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #161C32 ;
+    color: #121212;
+    line-height: 1.6;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Headings */
+h1{
+    color: #FAF9F6;
+    background-color: #0060AC;
+}
+h2, h3 {
+    margin-bottom: 10px;
+    color: #FAB800;
+    background-color: #161C32;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+    color: #FAF9F6;
+}
+
+/* Links */
+a {
+    color: #FAB800;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styling */
+button {
+    background-color: #0D59D1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0D59D1;
+}
+
+/* Simple container class */
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+#mainTitle{
+    background-color:rgba(22,28,50,0);
+    color: #FAB800;
+    font-size: 70;
+    padding: 3px;
+    text-align: center;
+    font-family: League Spartan;
+}
+
+
+
+.background {
+  /* Push back 1px, scale up to compensate */
+  transform: translateZ(-1px) scale(2);
+  background: url("images/backgroundCode.png") center/cover;
+  opacity: 0.3;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2) rotate(0.01deg);
+}
+
+.foreground {
+  transform: translateZ(0); /* Normal speed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.parallax-wrapper {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-viewport {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto; /* The scrollbar lives here now */
+  perspective: 1px; /* Creates the 3D depth */
+}
+.parallax-layer {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  backface-visibility: hidden; /* Stops the "ghostly" flickering */
+  will-change: transform;       /* Prepares the browser for movement */
+}
+
+.parallax-group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
